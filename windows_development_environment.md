@@ -168,3 +168,14 @@ rm -f get-pip.py
 
 # Install Golang
 
+```sh
+curl -sSL https://go.dev/dl/go1.17.6.linux-amd64.tar.gz -o go1.17.6.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz
+```
+
+add the following to `~/.profile`
+
+```
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/<USERNAME>/go/bin
+```
