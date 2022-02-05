@@ -131,6 +131,28 @@ if [ "$color_prompt" = yes ]; then
 
 # Install Python
 
+## Install Python method 1
+
+```sh
+curl https://pyenv.run | bash
+```
+
+add the following to `~/.bashrc`
+```
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+```
+and run
+```sh
+exec $SHELL
+pyenv --version
+pyenv install 3.9.10 # or which ever version required
+pyenv global 3.9.10
+python --version
+```
+
+## Install Python method 2
 ```sh
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
