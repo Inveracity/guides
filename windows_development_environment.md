@@ -23,9 +23,9 @@ processors=2
 Open Powershell in Windows Terminal and run the wsl commands
 
 ```sh
-wsl --install  # Install WSL
+wsl --install  # Install WSL, a reboot is often required afterwards
+wsl --set-default-version 2 # Set WSL2 as default
 wsl --install -d Ubuntu  # Install Ubuntu
-wsl --set-version Ubuntu 2 # Set WSL version 2
 wsl --setdefault Ubuntu  # Set Ubuntu as the default shell
 wsl -l -v  # Check it's set correctly
 ```
@@ -131,51 +131,8 @@ if [ "$color_prompt" = yes ]; then
 
 # Install Python
 
-## Install Python method 1
+[Install Python](./python.md)
 
-```sh
-curl https://pyenv.run | bash
-```
+# Golang
 
-add the following to `~/.bashrc`
-```
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
-```
-and run
-```sh
-exec $SHELL
-pyenv --version
-pyenv install 3.9.10 # or which ever version required
-pyenv global 3.9.10
-python --version
-```
-
-## Install Python method 2
-```sh
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt update
-sudo apt install python3.9 # or the version needed
-cp /usr/local/bin/python3.9 /usr/local/bin/python
-python --version
-
-curl -sSL https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python get-pip.py
-pip --version
-rm -f get-pip.py
-```
-
-# Install Golang
-
-```sh
-curl -sSL https://go.dev/dl/go1.17.6.linux-amd64.tar.gz -o go1.17.6.linux-amd64.tar.gz
-rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz
-```
-
-add the following to `~/.profile`
-
-```
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/<USERNAME>/go/bin
-```
+[Install Golang](./golang.md)
