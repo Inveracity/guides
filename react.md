@@ -60,7 +60,7 @@ and change `es5` to `es6`
 ## UI kits (MUI)
 
 ```
-npm install --save install @mui/material @emotion/react @emotion/styled
+npm install --save @mui/material @mui/icons-material @emotion/react @emotion/styled
 ```
 
 > More info at **[MUI.com](https://mui.com/)**
@@ -73,7 +73,7 @@ npm install --save install @mui/material @emotion/react @emotion/styled
 npm start
 ```
 
-## vscode settings
+## VScode settings
 
 `.vscode/settings.json`
 
