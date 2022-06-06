@@ -60,7 +60,7 @@ and change `es5` to `es6`
 ## UI kits (MUI)
 
 ```
-npm install --save npm install @mui/material @emotion/react @emotion/styled
+npm install --save install @mui/material @emotion/react @emotion/styled
 ```
 
 > More info at **[MUI.com](https://mui.com/)**
