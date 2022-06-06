@@ -65,6 +65,8 @@ npm install --save install @mui/material @emotion/react @emotion/styled
 
 > More info at **[MUI.com](https://mui.com/)**
 
+> example project **[MUI Example](https://github.com/mui/material-ui/tree/master/examples/create-react-app-with-typescript)**
+
 ## Run it
 
 ```
