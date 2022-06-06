@@ -70,3 +70,19 @@ npm install --save install @mui/material @emotion/react @emotion/styled
 ```
 npm start
 ```
+
+## vscode settings
+
+`.vscode/settings.json`
+
+```json
+{
+    "editor.formatOnSave": true,
+    "[typescriptreact]": {
+        "editor.tabSize": 2,
+    },
+    "[typescript]": {
+        "editor.tabSize": 2,
+    }
+}
+```
