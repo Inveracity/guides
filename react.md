@@ -65,12 +65,6 @@ npm install --save npm install @mui/material @emotion/react @emotion/styled
 
 > More info at **[MUI.com](https://mui.com/)**
 
-## Git Ignore
-
-Add a `.gitignore` using facebooks template
-
-- [React .gitignore template](https://github.com/facebook/react/blob/main/.gitignore)
-
 ## Run it
 
 ```
