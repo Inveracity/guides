@@ -1,12 +1,12 @@
 # Install Golang
 
-# Install Golang Windows
+# Install Golang (Windows)
 
 > **note**: Don't install with the msi installer. It requires Admin Privileges as is annoying when using an IDE without admin privs, like VSCode.
 
 - Create the folder `C:\Users\<USERNAME>\go`
 
-- Download the zip for [Go 1.17.6 win amd64](https://go.dev/dl/go1.17.6.windows-amd64.zip)
+- Download the zip for [Go 1.18.4 win amd64](https://go.dev/dl/go1.18.4.windows-amd64.zip)
 
 - Extract the zip into `C:\Users\<USERNAME>\go`
 
@@ -16,15 +16,15 @@ Add the following environment variables via _Edit the System Environment Variabl
 - Add GOPATH=`C:\Users\<USERNAME>\go`
 - Add GOBIN=`C:\Users\<USERNAME>\go\bin`
 
-This ensure Go can be run from commandline and that dependencies land in the right folders.
+This ensures Go can be run from commandline and that dependencies land in the right folders.
 
 When upgrading Go simply delete `C:\Users\<USERNAME>\go` and create a new folder to extract the new version in.
 
-# Install Golang Linux (or WSL)
+# Install Golang (Linux or WSL)
 
 ```sh
-curl -sSL https://go.dev/dl/go1.17.6.linux-amd64.tar.gz -o go1.17.6.linux-amd64.tar.gz
-rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.6.linux-amd64.tar.gz
+curl -sSL https://go.dev/dl/go1.18.4.linux-amd64.tar.gz -o go1.18.4.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.4.linux-amd64.tar.gz
 ```
 
 add the following to `~/.profile`
