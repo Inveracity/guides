@@ -16,8 +16,8 @@ and run
 ```sh
 exec $SHELL
 pyenv --version
-pyenv install 3.9.10 # or which ever version required
-pyenv global 3.9.10
+pyenv install 3.10.5 # or which ever version required
+pyenv global 3.10.5
 python --version
 ```
 
@@ -25,8 +25,8 @@ python --version
 ```sh
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
-sudo apt install python3.9 # or the version needed
-cp /usr/local/bin/python3.9 /usr/local/bin/python
+sudo apt install python3.10 # or the version needed
+cp /usr/local/bin/python3.10 /usr/local/bin/python
 python --version
 
 curl -sSL https://bootstrap.pypa.io/get-pip.py -o get-pip.py
