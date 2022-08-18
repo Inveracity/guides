@@ -23,8 +23,8 @@ When upgrading Go simply delete `C:\Users\<USERNAME>\go` and create a new folder
 # Install Golang (Linux or WSL)
 
 ```sh
-curl -sSL https://go.dev/dl/go1.18.4.linux-amd64.tar.gz -o go1.18.4.linux-amd64.tar.gz
-rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.4.linux-amd64.tar.gz
+curl -sSL https://go.dev/dl/go1.19.linux-amd64.tar.gz -o go1.19.linux-amd64.tar.gz
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
 ```
 
 add the following to `~/.profile`
