@@ -129,6 +129,10 @@ if [ "$color_prompt" = yes ]; then
 
 > **Note**: the above PS1 setting is a personal preference
 
+# Configure Powershell prompt
+
+[Powershell](./powershell.md)
+
 # Install Python
 
 [Install Python](./python.md)
