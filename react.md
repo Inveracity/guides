@@ -34,39 +34,19 @@ source ~/.profile
 
 ## React 18
 
-install react scripts
+Use Vite to create a new React project
 
 ```sh
-npm install --location=global react-scripts@latest
+npm init vite@latest MY_NEW_APP -- --template react-ts
+cd MY_NEW_APP
+npm install
+npm run dev
 ```
 
-create React scaffolding
-
-```sh
-mkdir my_new_app
-cd my_new_app
-npx create-react-app . --template cra-template-typescript
-```
-
-install react router dom and the typescript additions
+install react-router-dom
 
 ```sh
 npm install --save react-router-dom @types/react-router-dom
-```
-
-## Settings
-
-open up `tsconfig.json`
-
-and change `es5` to `es6`
-
-```diff
-{
-  "compilerOptions": {
--    "target": "es5",
-{
-  "compilerOptions": {
-+    "target": "es6",
 ```
 
 ## UI kits (MUI)
@@ -92,6 +72,7 @@ npm start
 ```json
 {
     "editor.formatOnSave": true,
+    "editor.detectIndentation": false,
     "[typescriptreact]": {
         "editor.tabSize": 2,
     },
