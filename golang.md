@@ -6,7 +6,7 @@
 
 - Create the folder `C:\Users\<USERNAME>\go`
 
-- Download the zip for [Go 1.18.4 win amd64](https://go.dev/dl/go1.18.4.windows-amd64.zip)
+- Download the zip for [Go 1.20.1 win amd64](https://go.dev/dl/go1.20.1.windows-amd64.zip)
 
 - Extract the zip into `C:\Users\<USERNAME>\go`
 
@@ -23,7 +23,7 @@ When upgrading Go simply delete `C:\Users\<USERNAME>\go` and create a new folder
 # Install Golang (Linux or WSL)
 
 ```sh
-curl -sSL https://go.dev/dl/go1.19.linux-amd64.tar.gz -o go1.19.linux-amd64.tar.gz
+curl -sSL https://go.dev/dl/go1.20.linux-amd64.tar.gz -o go1.20.linux-amd64.tar.gz
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
 ```
 
