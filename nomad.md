@@ -22,7 +22,7 @@ After=network-online.target
 
 [Service]
 ExecReload=/bin/kill -HUP $MAINPID
-ExecStart=/usr/local/bin/nomad agent -bind 0.0.0.0 -config /etc/nomad.d
+ExecStart=/usr/local/bin/nomad agent -config /etc/nomad.d
 KillMode=process
 KillSignal=SIGINT
 LimitNOFILE=65536
@@ -52,11 +52,24 @@ mkdir -p /etc/nomad.d
 touch /etc/nomad.d/nomad.hcl
 ```
 
-`/etc/nomad/nomad.hcl`:
+create a config file that enables both server and client `/etc/nomad/nomad.hcl`:
 
 ```hcl
+datacenter = "dc1"
+data_dir   = "/var/lib/nomad"
+bind_addr  = "0.0.0.0"
+
 acl {
   enabled = true
+}
+
+client {
+  enabled = true
+}
+
+server {
+  enabled = true
+  bootstrap_expect = 1
 }
 ```
 
@@ -79,11 +92,32 @@ echo "<SECRET_ID>" > bootstrap.token
 export NOMAD_TOKEN=$(cat bootstrap.token)
 ```
 
+> *note*: Add it to `~/.profile` for more ease
+
 Create a policy file: `~/policy.hcl`
 
 ```hcl
 namespace "default" {
   policy = "write"
+}
+namespace "*" {
+  policy = "read"
+}
+
+node {
+  policy = "read"
+}
+
+agent {
+  policy = "read"
+}
+
+operator {
+  policy = "read"
+}
+
+quota {
+  policy = "read"
 }
 ```
 
@@ -102,6 +136,13 @@ nomad acl token create -type="client" -name="default" -policy="default"
 # ...
 ```
 
+read logs
+
+```sh
+journalctl -f -u nomad.service
+```
+
+
 Open an ssh tunnel to the server running Nomad
 
 ```sh
@@ -115,4 +156,52 @@ export NOMAD_TOKEN="the new token"
 export NOMAD_ADDR="http://127.0.0.1:4646"
 
 nomad job status
+```
+
+> *note*: Add it to `~/.profile` for more ease
+
+
+## Traefik
+
+see [traefik](./traefik.md) for setting up traefik
+
+and then deploy this demo
+
+```hcl
+job "whoami" {
+  datacenters = ["dc1"]
+  type        = "service"
+  namespace   = "default"
+
+  group "whoami" {
+    count = 1
+
+    network {
+      port "http" {
+        to = 80
+      }
+    }
+
+    service {
+      name     = "whoami-http"
+      provider = "nomad"
+      port     = "http"
+      tags = [
+        "traefik.enable=true",
+        "traefik.http.routers.whoami.rule=Host(`mydomain`)",
+        "traefik.http.routers.whoami.entrypoints=websecure",
+        "traefik.http.routers.whoami.tls=true",
+        "traefik.http.routers.whoami.tls.certresolver=myresolver",
+      ]
+    }
+
+    task "server" {
+      driver = "docker"
+      config {
+        image = "traefik/whoami:latest"
+        ports = ["http"]
+      }
+    }
+  }
+}
 ```
