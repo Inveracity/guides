@@ -5,7 +5,7 @@ tags = ["windows"]
 
 # Windows Development Environment for Software Engineers
 
-How to set up a development environment on Windows 10/11 with docker
+How to set up a development environment on Windows 11
 
 
 # Install Windows Terminal
@@ -14,13 +14,10 @@ Open Microsoft Store and search for Terminal and install it
 
 # Install WSL
 
-create a `.wslconfig`
+create the file `C:\Users\<user>\.wslconfig` with the following content:
 
-open `C:\Users\<user>\.wslconfig`
-
-and add
-
-```toml
+```ini
+# C:\Users\<user>\.wslconfig
 [wsl2]
 memory=2GB
 processors=2
@@ -46,7 +43,7 @@ Set Ubuntu as the default shell in the settings
 
 In WSL create `/etc/wsl.conf`
 
-```
+```ini
 [boot]
 command = #add a command you want to run at boot
 ```
@@ -54,14 +51,14 @@ command = #add a command you want to run at boot
 
 Some VPNs require a different MTU size that can be set in the boot command section
 
-```
+```ini
 command = ip link set dev eth0 mtu 1280
 ```
 
 
 # WSL welcome message
 
-Silence the welcome message
+Silence the welcome message in WSL
 
 ```sh
 touch ~/.hushlogin
@@ -72,7 +69,7 @@ touch ~/.hushlogin
 
 In WSL add a folder in the home directory
 
-```
+```sh
 mkdir ~/.ssh
 ```
 
@@ -80,7 +77,7 @@ add your public and private SSH key files
 
 and set the access control on the files
 
-```
+```sh
 chmod 600 ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa.pub
 ```
@@ -137,12 +134,12 @@ if [ "$color_prompt" = yes ]; then
 
 # Configure Powershell prompt
 
-[Powershell](./powershell.md)
+[Powershell](/posts/powershell)
 
 # Install Python
 
-[Install Python](./python.md)
+[Install Python](/posts/python)
 
 # Golang
 
-[Install Golang](./golang.md)
+[Install Golang](/posts/golang)

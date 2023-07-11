@@ -7,7 +7,11 @@ tags = ["powershell", "windows" ]
 
 ## Custom Powershell Prompt
 
-Creat the following file: `C:\Users\<USERNAME>\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
+Creat the following file:
+
+```powershell
+C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+```
 
 Add the below code to the file and save it.
 

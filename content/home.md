@@ -18,6 +18,7 @@ collection of guides with minimal explanation
 ### Web
 
 - [React](/posts/react)
+- [Hugo](/posts/hugo)
 
 ### Infrastructure
 

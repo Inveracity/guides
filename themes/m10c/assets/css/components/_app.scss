@@ -30,9 +30,28 @@
 .app-header-title {
   color: $lightest-color;
   display: block;
-  font-size: 2em;
+  font-size: 1em;
   margin: 0.67em 0;
   font-weight: bold;
+  word-spacing: 0.4em;
+  letter-spacing: 0.1em;
+
+}
+
+.app-header-menu a {
+  font-family: 'Fira Code',monospace;
+  color: #54a87a;
+  transition: color .35s;
+  text-decoration: none;
+  font-variant-caps: all-small-caps;
+  font-size: 1.4em;
+}
+
+.app-header p {
+  color: $light-color;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: bold;
+  font-size: 0.8em;
 }
 
 @media (min-width: 940px) {

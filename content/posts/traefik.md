@@ -17,7 +17,7 @@ mv traefik /usr/local/bin/
 
 Create a service file: `/etc/systemd/system/traefik.service`
 
-```r
+```ini
 [Unit]
 Description=traefik proxy
 After=network-online.target
@@ -40,7 +40,7 @@ and also create the directory `/var/lib/traefik` to store certificates in
 
 ```yaml
 log:
-  level: INFO
+  level: "INFO"
 
 api:
   insecure: true
@@ -67,7 +67,7 @@ certificatesResolvers:
       email: "test@example.com"
       storage: "/var/lib/traefik/acme.json"
       dnsChallenge:
-        provider: <your dns provider>
+        provider: "<your DNS provider>"
         delayBeforeCheck: 10
         resolvers:
         - "1.1.1.1:53"

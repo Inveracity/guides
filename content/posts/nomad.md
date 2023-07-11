@@ -3,13 +3,11 @@ title = "Nomad"
 tags = ["nomad", "infrastructure", "devops", "traefik", "linux", "systemd"]
 +++
 
-# Nomad
-
-Install Nomad
+## Installation
 
 > [official docs](https://developer.hashicorp.com/nomad/downloads)
 
-```sh
+```bash
 apt install unzip
 curl -L https://releases.hashicorp.com/nomad/1.5.6/nomad_1.5.6_linux_amd64.zip -o nomad_1.5.6_linux_amd64.zip
 unzip nomad_1.5.6_linux_amd64.zip
@@ -18,7 +16,7 @@ sudo mv ./nomad /usr/local/bin/
 
 Create a systemd service `/etc/systemd/system/nomad.service`
 
-```r
+```ini
 [Unit]
 Description=Nomad
 Documentation=https://www.nomadproject.io/docs/

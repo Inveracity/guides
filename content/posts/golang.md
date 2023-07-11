@@ -1,6 +1,6 @@
 +++
-title = "Golang"
-tags = ["Go", "Programming", "linux"]
+title = "Install Go"
+tags = ["Programming"]
 +++
 
 ## Install Golang

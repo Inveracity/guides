@@ -1,6 +1,6 @@
 +++
-title = "Python"
-tags = ["python", "programming", "windows", "linux"]
+title = "Install Python"
+tags = ["programming"]
 +++
 
 # Install Python
@@ -12,12 +12,15 @@ curl https://pyenv.run | bash
 ```
 
 add the following to `~/.bashrc`
-```
+
+```sh
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 ```
+
 and run
+
 ```sh
 exec $SHELL
 pyenv --version

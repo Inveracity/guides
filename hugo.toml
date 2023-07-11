@@ -1,13 +1,11 @@
 baseURL = 'http://christopherbaklid.com/'
 languageCode = 'en-gb'
-title = 'Christopher B. Simione'
+title = 'CHRISTOPHER B. SIMIONE'
 theme = "m10c"
 paginate = 8
 
 [params]
-  author = "Christopher B. Simione"
-  email = "cbaklid@gmail.com"
-  description = "Code and Chaos"
+  description = "Minimally explained technical documentation"
 
 [[menu.main]]
   identifier = "home"
@@ -16,7 +14,7 @@ paginate = 8
   weight = 1
 [[menu.main]]
   identifier = "tags"
-  name = "Tags"
+  name = "Docs"
   url = "/tags/"
   weight = 2
 
@@ -36,4 +34,4 @@ paginate = 8
 [markup.highlight]
     codeFences = true
     noClasses = true
-    style = "nord"
+    style = "onedark"

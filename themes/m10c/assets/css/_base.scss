@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: $dark-color;
   color: $light-color;
 }
@@ -32,9 +34,13 @@ a {
 // small inline code-blocks in the middle of normal text (mainly because of
 // the very noticeable difference in x-height). This CSS corrects that problem.
 code {
-  font-family: monospace,monospace;
+  font-family: 'Fira Code',monospace;
   font-size: 1em;
-  color: rgba($light-color, .8);
+  color: rgba($light-color, 1);
+  background-color: rgba($primary-color, 0.5);
+
+  padding: 0.1em 0.3em;
+  border-radius: 0.2em;
 
   // Fixes iOS font sizing anomaly
   text-size-adjust: 100%;
@@ -45,15 +51,16 @@ code {
 
 pre {
   font-size: 1rem;
-  line-height: 1.2em;
+  line-height: 1.3em;
   margin: 0;
   overflow: auto;
+  padding: 1em;
+  border-radius: 0.3em;
 
-  // A larger monospaced block of text (that isn't mixed with normal text)
-  // generally looks heavier than normal text with the same font size. For this
-  // reason using a smaller monospaced font size makes sense in this situation.
+
   code {
-    font-size: .8em;
+    background-color: rgba($primary-color, 0); // Reset background color
+    font-size: 1em;
   }
 }
 
