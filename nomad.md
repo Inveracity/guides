@@ -54,6 +54,8 @@ touch /etc/nomad.d/nomad.hcl
 
 create a config file that enables both server and client `/etc/nomad/nomad.hcl`:
 
+> *optional*: create a data volume with `mkdir -p /mnt/data` if required by a workload
+
 ```hcl
 datacenter = "dc1"
 data_dir   = "/var/lib/nomad"
@@ -65,6 +67,12 @@ acl {
 
 client {
   enabled = true
+
+  # Optional volume
+  # host_volume "data" {
+  #     path      = "/mnt/data"
+  #     read_only = false
+  # }
 }
 
 server {
@@ -100,6 +108,7 @@ Create a policy file: `~/policy.hcl`
 namespace "default" {
   policy = "write"
 }
+
 namespace "*" {
   policy = "read"
 }
