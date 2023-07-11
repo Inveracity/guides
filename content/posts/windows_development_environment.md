@@ -1,3 +1,8 @@
++++
+title = "Windows Dev Environment"
+tags = ["windows"]
++++
+
 # Windows Development Environment for Software Engineers
 
 How to set up a development environment on Windows 10/11 with docker
@@ -14,7 +19,8 @@ create a `.wslconfig`
 open `C:\Users\<user>\.wslconfig`
 
 and add
-```
+
+```toml
 [wsl2]
 memory=2GB
 processors=2

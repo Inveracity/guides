@@ -1,3 +1,8 @@
++++
+title = "Traefik"
+tags = ["infrastructure", "ingress", "devops", "linux"]
++++
+
 # Traefik
 
 Install
@@ -87,6 +92,6 @@ journalctl -f -u traefik.service
 
 Open an SSH tunnel to see the dashboard
 
-```
+```sh
 ssh -L 8080:127.0.0.1:8080 <user>@<ip> -N
 ```

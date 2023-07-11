@@ -1,3 +1,8 @@
++++
+title = "React"
+tags = ["react", "web", "linux"]
++++
+
 # Setup React
 
 ## Install Node

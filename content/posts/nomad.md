@@ -1,3 +1,8 @@
++++
+title = "Nomad"
+tags = ["nomad", "infrastructure", "devops", "traefik", "linux", "systemd"]
++++
+
 # Nomad
 
 Install Nomad
@@ -170,9 +175,9 @@ nomad job status
 > *note*: Add it to `~/.profile` for more ease
 
 
-## Traefik
+## Deploy
 
-see [traefik](./traefik.md) for setting up traefik
+> see the [Traefik page](./traefik) for setting up Traefik
 
 and then deploy this demo
 

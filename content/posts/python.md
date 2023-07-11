@@ -1,3 +1,8 @@
++++
+title = "Python"
+tags = ["python", "programming", "windows", "linux"]
++++
+
 # Install Python
 
 ## Install Python for linux method 1

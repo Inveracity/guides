@@ -1,3 +1,8 @@
++++
+title = "Powershell"
+tags = ["powershell", "windows" ]
++++
+
 # Powershell (5.1)
 
 ## Custom Powershell Prompt
