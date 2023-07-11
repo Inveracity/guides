@@ -1,6 +1,6 @@
 +++
 title = "React"
-tags = ["react", "web", "linux"]
+categories = ["Web"]
 +++
 
 # Setup React
@@ -76,13 +76,13 @@ npm start
 
 ```json
 {
-    "editor.formatOnSave": true,
-    "editor.detectIndentation": false,
-    "[typescriptreact]": {
-        "editor.tabSize": 2,
-    },
-    "[typescript]": {
-        "editor.tabSize": 2,
-    }
+  "editor.formatOnSave": true,
+  "editor.detectIndentation": false,
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+  }
 }
 ```

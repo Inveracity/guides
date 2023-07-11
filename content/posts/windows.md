@@ -1,18 +1,18 @@
 +++
-title = "Windows Dev Environment"
-tags = ["windows"]
+title = "Windows"
+categories = ["Setup"]
 +++
 
-# Windows Development Environment for Software Engineers
+## Windows Development Environment for Software Engineers
 
 How to set up a development environment on Windows 11
 
 
-# Install Windows Terminal
+### Install Windows Terminal
 
 Open Microsoft Store and search for Terminal and install it
 
-# Install WSL
+### Install WSL
 
 create the file `C:\Users\<user>\.wslconfig` with the following content:
 
@@ -33,13 +33,13 @@ wsl --setdefault Ubuntu  # Set Ubuntu as the default shell
 wsl -l -v  # Check it's set correctly
 ```
 
-# Configure Windows Terminal
+### Configure Windows Terminal
 
 In Windows Terminal press `CTRL`+`,` to open the settings
 
 Set Ubuntu as the default shell in the settings
 
-# Configure WSL
+## Configure WSL
 
 In WSL create `/etc/wsl.conf`
 
@@ -56,7 +56,7 @@ command = ip link set dev eth0 mtu 1280
 ```
 
 
-# WSL welcome message
+### WSL welcome message
 
 Silence the welcome message in WSL
 
@@ -65,7 +65,7 @@ touch ~/.hushlogin
 ```
 
 
-# Configure SSH
+### Configure SSH
 
 In WSL add a folder in the home directory
 
@@ -82,7 +82,7 @@ chmod 600 ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa.pub
 ```
 
-# Install Keychain SSH Agent
+### Install Keychain SSH Agent
 
 In WSL
 
@@ -99,20 +99,7 @@ in `~/.profile` add the following line
 eval `keychain --eval --agents ssh id_rsa`
 ```
 
-# Install VSCode
-
-Download and install VSCode from [code.visualstudio.com](https://code.visualstudio.com/download)
-
-Open VSCode and install the extension `Remote - WSL` from microsoft
-
-Open the WSL shell and type in
-
-```sh
-cd ~ # go to the home folder
-code . # run code
-```
-
-# Configure bash prompt
+### Configure bash prompt
 
 Find the PS1 section in `~/.bashrc`
 
@@ -132,14 +119,19 @@ if [ "$color_prompt" = yes ]; then
 
 > **Note**: the above PS1 setting is a personal preference
 
-# Configure Powershell prompt
+## Install VSCode
+
+Download and install VSCode from [code.visualstudio.com](https://code.visualstudio.com/download)
+
+Open VSCode and install the extension `Remote - WSL` from microsoft
+
+Open the WSL shell and run
+
+```sh
+cd ~ # go to the home folder
+code . # run VSCode
+```
+
+## Configure Powershell prompt
 
 [Powershell](/posts/powershell)
-
-# Install Python
-
-[Install Python](/posts/python)
-
-# Golang
-
-[Install Golang](/posts/golang)

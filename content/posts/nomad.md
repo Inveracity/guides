@@ -1,6 +1,6 @@
 +++
 title = "Nomad"
-tags = ["nomad", "infrastructure", "devops", "traefik", "linux", "systemd"]
+categories = ["Infrastructure"]
 +++
 
 ## Installation

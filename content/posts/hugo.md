@@ -1,6 +1,6 @@
 +++
 title = "Hugo"
-tags = ["website", "blog"]
+categories = ["Web"]
 +++
 
 ## Install hugo

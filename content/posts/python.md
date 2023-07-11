@@ -1,6 +1,6 @@
 +++
 title = "Install Python"
-tags = ["programming"]
+categories = ["Coding"]
 +++
 
 # Install Python

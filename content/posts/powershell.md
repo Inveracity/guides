@@ -1,19 +1,17 @@
 +++
 title = "Powershell"
-tags = ["powershell", "windows" ]
+categories = ["Coding"]
 +++
 
-# Powershell (5.1)
+## Custom Powershell (5.1) Prompt
 
-## Custom Powershell Prompt
-
-Creat the following file:
+Create the following file:
 
 ```powershell
 C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 ```
 
-Add the below code to the file and save it.
+With the following contents:
 
 ```powershell
 function Write-BranchName () {

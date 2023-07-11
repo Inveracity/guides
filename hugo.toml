@@ -13,11 +13,10 @@ paginate = 8
   url = "/"
   weight = 1
 [[menu.main]]
-  identifier = "tags"
+  identifier = "categories"
   name = "Docs"
-  url = "/tags/"
+  url = "/categories/"
   weight = 2
-
 
 [[params.social]]
   icon = "github"
@@ -35,3 +34,8 @@ paginate = 8
     codeFences = true
     noClasses = true
     style = "onedark"
+    tabWidth = 2
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
