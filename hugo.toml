@@ -1,4 +1,4 @@
-baseURL = 'http://christopherbaklid.com/'
+#baseURL = 'http://christopherbaklid.com/'
 languageCode = 'en-gb'
 title = 'CHRISTOPHER B. SIMIONE'
 theme = "m10c"

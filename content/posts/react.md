@@ -3,41 +3,9 @@ title = "React"
 categories = ["Web"]
 +++
 
-# Setup React
+## Setup React 18
 
-## Install Node
-
-```sh
-curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
-
-check it
-
-```sh
-node -v
-npm -v
-```
-
-configure
-
-```sh
-mkdir ~/.node
-npm config set prefix ~/.node
-```
-
-Add the node binaries to PATH
-
-```sh
-#~/.profile
-export PATH=~/.node/bin:$PATH
-```
-
-```sh
-source ~/.profile
-```
-
-## React 18
+> **Important**: Install [Node](/posts/node) first
 
 Use Vite to create a new React project
 
