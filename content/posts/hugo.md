@@ -16,13 +16,13 @@ go install -tags extended github.com/gohugoio/hugo@latest
 ### Creating a new website
 
 ```sh
-hugo new site mysite
+hugo new site my-site
 ```
 
 Installing the [m10c](https://github.com/vaga/hugo-theme-m10c) theme
 
 ```sh
-cd mysite
+cd my-site
 git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
 ```
 
