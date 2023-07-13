@@ -77,6 +77,6 @@ Start powershell or run the below command to update the prompt
 and it should appear like so (but with actual colors):
 
 ```powershell
-Username:~\git\someproject (git-branch-name) PS>
+Username:~\git\some_project (git-branch-name) PS>
 > |
 ```
