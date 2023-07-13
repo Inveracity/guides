@@ -11,7 +11,13 @@
   "files.associations": {
     "*.nomad": "hcl"
   },
+  "[html]": {
+    "editor.formatOnSave": false
+  },
   "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "[scss]": {
     "editor.formatOnSave": false
   },
   "cSpell.words": [
