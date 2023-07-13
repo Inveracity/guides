@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": true,
+    "[hcl]": {
+        "editor.tabSize": 2
+    },
+    "files.associations": {
+        "*.nomad": "hcl"
+    }
+}
