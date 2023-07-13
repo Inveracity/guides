@@ -24,33 +24,18 @@ npm install --save react-router-dom @types/react-router-dom
 
 ## UI kits (MUI)
 
-```
+Add a UI library to get started quickly
+
+```sh
 npm install --save @mui/material @mui/icons-material @emotion/react @emotion/styled
 ```
 
 > More info at **[MUI.com](https://mui.com/)**
-
-> example project **[MUI Example](https://github.com/mui/material-ui/tree/master/examples/create-react-app-with-typescript)**
+>
+> Example project **[MUI Example](https://github.com/mui/material-ui/tree/master/examples/material-vite-ts)**
 
 ## Run it
 
-```
+```sh
 npm start
-```
-
-## VScode settings
-
-`.vscode/settings.json`
-
-```json
-{
-  "editor.formatOnSave": true,
-  "editor.detectIndentation": false,
-  "[typescriptreact]": {
-    "editor.tabSize": 2,
-  },
-  "[typescript]": {
-    "editor.tabSize": 2,
-  }
-}
 ```
