@@ -48,6 +48,8 @@ sudo systemctl start nomad.service
 sudo systemctl enable nomad.service
 ```
 
+## Configuration
+
 Create a configuration file to create a bootstrapping token
 
 ```sh
@@ -57,7 +59,7 @@ touch /etc/nomad.d/nomad.hcl
 
 create a config file that enables both server and client `/etc/nomad/nomad.hcl`:
 
-> *optional*: create a data volume with `mkdir -p /mnt/data` if required by a workload
+> _optional_: create a data volume with `mkdir -p /mnt/data` if required by a workload
 
 ```hcl
 datacenter = "dc1"
@@ -88,7 +90,6 @@ Restart nomad
 
 ```sh
 sudo systemctl restart nomad.service
-
 ```
 
 Create a bootstrap token
@@ -103,13 +104,21 @@ echo "<SECRET_ID>" > bootstrap.token
 export NOMAD_TOKEN=$(cat bootstrap.token)
 ```
 
-> *note*: Add it to `~/.profile` for more ease
+> **note**: Add it to `~/.profile` for more ease
+
+## ACL
 
 Create a policy file: `~/policy.hcl`
 
 ```hcl
 namespace "default" {
   policy = "write"
+
+  variables {
+    path "*" {
+      capabilities = ["write", "read", "destroy"]
+    }
+  }
 }
 
 namespace "*" {
@@ -148,14 +157,19 @@ nomad acl token create -type="client" -name="default" -policy="default"
 # ...
 ```
 
+## Logs
+
 read logs
 
 ```sh
 journalctl -f -u nomad.service
 ```
 
+## Using Nomad
 
 Open an ssh tunnel to the server running Nomad
+
+> **Note** see my custom ssh tunnel tool [github.com/inveracity/ssh-tunnel](https://github.com/inveracity/ssh-tunnel)
 
 ```sh
 ssh -L 4646:127.0.0.1:4646 <user>@<server> -N
@@ -170,14 +184,13 @@ export NOMAD_ADDR="http://127.0.0.1:4646"
 nomad job status
 ```
 
-> *note*: Add it to `~/.profile` for more ease
-
+> _note_: Add it to `~/.profile` for more ease
 
 ## Deploy
 
-> see the [Traefik page](./traefik) for setting up Traefik
+> see the [Traefik page](./traefik) for setting up Traefik and then deploy this demo
 
-and then deploy this demo
+Create the file `whoami.nomad` with the following contents:
 
 ```hcl
 job "whoami" {
@@ -216,4 +229,11 @@ job "whoami" {
     }
   }
 }
+```
+
+deploy it with the Nomad CLI
+
+```sh
+nomad job run whoami.nomad
+nomad job status
 ```
