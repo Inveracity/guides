@@ -7,7 +7,7 @@ categories = ["Coding"]
 
 ### Install Golang (Windows)
 
-> **note**: Don't install with the msi installer. It requires Admin Privileges and is annoying when using an IDE without admin privs, like VSCode.
+> **note**: Don't install with the msi installer. It requires Admin Privileges and is annoying when using an IDE without admin privileges, like VSCode.
 
 - Create the folder `C:\Users\<username>\go`
 
@@ -23,7 +23,7 @@ Add the following environment variables via _Edit the System Environment Variabl
 | GOBIN | `C:\Users\<username>\go\bin` |
 | GOPATH | `C:\Users\<username>\go` |
 
-This ensures Go can be run from commandline and that dependencies land in the right folders.
+This ensures Go can be run from the command line and that dependencies land in the right folders.
 
 When upgrading Go simply delete `C:\Users\<username>\go` and create a new folder to extract the new version in.
 
