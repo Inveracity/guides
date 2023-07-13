@@ -1,9 +1,13 @@
 {
-    "editor.formatOnSave": true,
-    "[hcl]": {
-        "editor.tabSize": 2
-    },
-    "files.associations": {
-        "*.nomad": "hcl"
-    }
+  "editor.trimAutoWhitespace": true,
+  "editor.formatOnSave": true,
+  "[hcl]": {
+    "editor.tabSize": 2
+  },
+  "files.associations": {
+    "*.nomad": "hcl"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  }
 }
