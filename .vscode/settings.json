@@ -1,6 +1,10 @@
 {
   "editor.trimAutoWhitespace": true,
   "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "cSpell.enabledLanguageIds": [
+    "markdown",
+  ],
   "[hcl]": {
     "editor.tabSize": 2
   },
@@ -9,5 +13,44 @@
   },
   "[markdown]": {
     "editor.formatOnSave": false
-  }
+  },
+  "cSpell.words": [
+    "certresolver",
+    "configfile",
+    "datacenter",
+    "datacenters",
+    "deadsnakes",
+    "entrypoints",
+    "exposedbydefault",
+    "GOBIN",
+    "gohugoio",
+    "GOPATH",
+    "hushlogin",
+    "journalctl",
+    "Keychain",
+    "LASTEXITCODE",
+    "MAINPID",
+    "mydomain",
+    "myresolver",
+    "networkd",
+    "NOFILE",
+    "NPROC",
+    "pyenv",
+    "pylint",
+    "setdefault",
+    "SHOWCOLORHINTS",
+    "SHOWDIRTYSTATE",
+    "SHOWSTASHSTATE",
+    "SHOWUNTRACKEDFILES",
+    "SHOWUPSTREAM",
+    "SIGINT",
+    "SOMEKEY",
+    "SOMEVALUE",
+    "Traefik",
+    "USERPROFILE",
+    "virtualenv",
+    "websecure",
+    "wslconfig",
+    "zxvf"
+  ]
 }
