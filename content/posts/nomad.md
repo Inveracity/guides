@@ -5,7 +5,14 @@ categories = ["Infrastructure"]
 
 ## Installation
 
-> [official docs](https://developer.hashicorp.com/nomad/downloads)
+{{< admonition type="info" title="Nomad installation docs" >}}
+<https://developer.hashicorp.com/nomad/downloads>
+{{< /admonition >}}
+
+
+{{< admonition type="terminal" title="Shell" >}}
+
+My preferred way to install Nomad:
 
 ```bash
 apt install unzip
@@ -13,6 +20,8 @@ curl -L https://releases.hashicorp.com/nomad/1.5.6/nomad_1.5.6_linux_amd64.zip -
 unzip nomad_1.5.6_linux_amd64.zip
 sudo mv ./nomad /usr/local/bin/
 ```
+
+{{< /admonition >}}
 
 Create a systemd service `/etc/systemd/system/nomad.service`
 
@@ -59,7 +68,17 @@ touch /etc/nomad.d/nomad.hcl
 
 create a config file that enables both server and client `/etc/nomad/nomad.hcl`:
 
-> _optional_: create a data volume with `mkdir -p /mnt/data` if required by a workload
+{{< admonition type="info" title="Optional volume" >}}
+_optional_: create a data volume with
+
+```sh
+mkdir -p /mnt/data
+```
+
+and add it to the configuration.
+
+Volumes are necessary for stateful workloads like databases.
+{{< /admonition >}}
 
 ```hcl
 datacenter = "dc1"
@@ -74,10 +93,10 @@ client {
   enabled = true
 
   # Optional volume
-  # host_volume "data" {
-  #     path      = "/mnt/data"
-  #     read_only = false
-  # }
+  host_volume "data" {
+      path      = "/mnt/data"
+      read_only = false
+  }
 }
 
 server {
@@ -167,9 +186,11 @@ journalctl -f -u nomad.service
 
 ## Using Nomad
 
-Open an ssh tunnel to the server running Nomad
+Open an SSH tunnel to the server running Nomad
 
-> **Note** see my custom ssh tunnel tool [github.com/inveracity/ssh-tunnel](https://github.com/inveracity/ssh-tunnel)
+{{< admonition type="info" title="tip" >}}
+see my custom ssh tunnel tool [github.com/inveracity/ssh-tunnel](https://github.com/inveracity/ssh-tunnel)
+{{< /admonition >}}
 
 ```sh
 ssh -L 4646:127.0.0.1:4646 <user>@<server> -N
@@ -184,11 +205,15 @@ export NOMAD_ADDR="http://127.0.0.1:4646"
 nomad job status
 ```
 
-> _note_: Add it to `~/.profile` for more ease
+{{< admonition type="info" title="tip" >}}
+Add the environment variables to the `~/.profile` file
+{{< /admonition >}}
 
 ## Deploy
 
-> see the [Traefik page](./traefik) for setting up Traefik and then deploy this demo
+{{< admonition type="info" title="Traefik" >}}
+see the [Traefik page](./traefik) for setting up Traefik and then deploy this demo
+{{< /admonition >}}
 
 Create the file `whoami.nomad` with the following contents:
 
