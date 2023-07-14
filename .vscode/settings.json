@@ -3,7 +3,7 @@
   "editor.formatOnSave": true,
   "files.insertFinalNewline": true,
   "cSpell.enabledLanguageIds": [
-    "markdown",
+    "markdown"
   ],
   "[hcl]": {
     "editor.tabSize": 2
@@ -31,6 +31,7 @@
     "GOBIN",
     "gohugoio",
     "GOPATH",
+    "Heya",
     "hushlogin",
     "journalctl",
     "Keychain",
