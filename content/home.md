@@ -5,14 +5,14 @@ title = "Home"
 # README
 
 ## About
-Typically websites like these are for blogging. But I'm not a blogger. So instead my website is a collection of guides with minimal explanation that I use as reference for my own benefit.
+This is a collection of guides with minimal explanation that I use as reference for my own benefit.
 
 
 The reason for the "_minimally explained_" bit is to keep it brief and fast to glance through.
 
 > See the [docs section](/categories/) for a list of contents.
 
-If you've found your way to this website and use the guides for your own setup and find some parts to be either out of date or could use a little more than _minimal explanation_, then feel free to open an issue in github.
+Feel free to open an issue on GitHub if you find anything to be wrong or out-of-date.
 
 {{< admonition type="github" title="website source code">}}
 
