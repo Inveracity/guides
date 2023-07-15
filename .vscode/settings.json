@@ -39,6 +39,7 @@
     "MAINPID",
     "mydomain",
     "myresolver",
+    "NATS",
     "networkd",
     "NOFILE",
     "NPROC",

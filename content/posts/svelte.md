@@ -5,7 +5,11 @@ categories = ["Web"]
 
 ## SvelteKit
 
-> **Important**: Install [Node](/posts/node) first
+{{< admonition type="info" title="Node" >}}
+
+Install [Node](/posts/node)
+
+{{< /admonition >}}
 
 ```sh
 npm create vite@latest my-svelte-app -- --template svelte-ts

@@ -24,10 +24,14 @@ mkdir ~/.node
 npm config set prefix ~/.node
 ```
 
-Add the node binaries to PATH
+Add the node binaries to PATH by putting the following content into `~/.profile`
 
 ```sh
-#~/.profile
 export PATH=~/.node/bin:$PATH
+```
+
+and then update the environment
+
+```sh
 source ~/.profile
 ```
