@@ -7,7 +7,7 @@ categories = ["Web"]
 
 {{< admonition type="info" title="Node" >}}
 
-Install [Node](/posts/node)
+Install [Node](/posts/node/)
 
 {{< /admonition >}}
 
