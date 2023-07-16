@@ -7,7 +7,11 @@ categories = ["Web"]
 
 This particular website is powered by Hugo.
 
-> Before installing Hugo, [install Go](/posts/golang)
+{{< admonition type="info" title="Go" >}}
+Before installing Hugo, [install Go](/posts/golang)
+{{< /admonition >}}
+
+Installing Hugo via Go ensures it's compiled for the environment. But it can take a minute to complete.
 
 ```sh
 go install -tags extended github.com/gohugoio/hugo@latest

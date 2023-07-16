@@ -7,7 +7,6 @@ categories = ["Setup"]
 
 How to set up a development environment on Windows 11
 
-
 ### Install Windows Terminal
 
 Open Microsoft Store and search for Terminal and install it

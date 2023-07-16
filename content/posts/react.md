@@ -29,11 +29,10 @@ Add a UI library to get started quickly
 ```sh
 npm install --save @mui/material @mui/icons-material @emotion/react @emotion/styled
 ```
-
-> More info at **[MUI.com](https://mui.com/)**
->
-> Example project **[MUI Example](https://github.com/mui/material-ui/tree/master/examples/material-vite-ts)**
-
+{{< admonition type="info" title="MUI" >}}
+- More info at **[MUI.com](https://mui.com/)**
+- Example project **[MUI Example](https://github.com/mui/material-ui/tree/master/examples/material-vite-ts)**
+{{< /admonition >}}
 ## Run it
 
 ```sh
