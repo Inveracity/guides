@@ -3,6 +3,8 @@ title = "VSCode"
 categories = ["Setup"]
 +++
 
+## Project configuration
+
 In the root of a project add the contents below to `.vscode/settings.json`
 
 ```json

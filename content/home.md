@@ -2,31 +2,47 @@
 title = "Home"
 +++
 
-{{< admonition type="github" title="website source code">}}
-
-[github.com/inveracity/guides](https://github.com/inveracity/guides)
-
-{{< /admonition >}}
-
-## `readme`
+## README
 
 This is a collection of guides with minimal explanation that I use as reference for my own benefit.
 The reason for the "_minimally explained_" bit is to keep it brief and fast to glance through. See the [docs section](/categories/) for a list of contents.
-Feel free to open an issue on GitHub if you find anything to be wrong or out-of-date.
+Feel free to [open an issue on GitHub](https://github.com/Inveracity/guides) if you find anything to be incorrect or out of date.
 
-## `about`
+### About myself
 
 I'm Christopher.
 
 I'm a **Software Engineer** with over a decade of experience. I primarily focus on DevEx and system integrations.
 This means writing a lot of CLI tools, self-service UIs and infrastructure-as-code.
 
-## `projects`
+## Projects
 
-I like to tinker with both backend and frontend technologies. Here's a list of personal projects that cover a few:
+The following is a list of personal projects.
 
-| Project          | Description   | Source | URL | Technologies |
-|:-----------------|:--------------|:-------|:----|:-------------|
-| Chat             | Realtime Chat app on gRPC streaming | <https://github.com/Inveracity/svelte-grpc-stream> | <https://chat.christopherbaklid.com> | Svelte, Go, gRPC, PocketBase, NATS, Redis |
-| Task distributor | Running predefined tasks asynchronously at scale | <https://github.com/Inveracity/nats-python-example> | | Python, RethinkDB, NATS |
-| Desktop App      | A small UI for increasing the volume on video files | <https://github.com/Inveracity/toolow> | | Wails, Go, FFMPEG |
+> ### Chat
+>
+> Realtime chat over gRPC
+>
+> - [source](https://github.com/Inveracity/svelte-grpc-stream)
+>
+> - [demo](https://chat.christopherbaklid.com)
+>
+> `Svelte` `Go` `gRPC` `PocketBase` `NATS` `Redis`
+
+
+> ### Task distributor
+>
+> Asynchronous task runner
+>
+> - [source](https://github.com/Inveracity/nats-python-example)
+>
+> `Python` `RethinkDB` `NATS`
+>
+
+> ### Toolow
+>
+> A small UI for increasing the volume on video files
+>
+> - [source](https://github.com/Inveracity/toolow)
+>
+> `Wails` `Go` `FFMPEG`

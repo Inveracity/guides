@@ -10,8 +10,6 @@ categories = ["Infrastructure"]
 {{< /admonition >}}
 
 
-{{< admonition type="terminal" title="Shell" >}}
-
 My preferred way to install Nomad:
 
 ```bash
@@ -20,8 +18,6 @@ curl -L https://releases.hashicorp.com/nomad/1.5.6/nomad_1.5.6_linux_amd64.zip -
 unzip nomad_1.5.6_linux_amd64.zip
 sudo mv ./nomad /usr/local/bin/
 ```
-
-{{< /admonition >}}
 
 Create a systemd service `/etc/systemd/system/nomad.service`
 

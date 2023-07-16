@@ -54,6 +54,7 @@
     "SIGINT",
     "SOMEKEY",
     "SOMEVALUE",
+    "Toolow",
     "Traefik",
     "USERPROFILE",
     "virtualenv",
