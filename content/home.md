@@ -15,34 +15,41 @@ I'm Christopher.
 I'm a **Software Engineer** with over a decade of experience. I primarily focus on DevEx and system integrations.
 This means writing a lot of CLI tools, self-service UIs and infrastructure-as-code.
 
+I write code in Python, Go, Typescript (Javascript)
+
 ## Projects
 
 The following is a list of personal projects.
 
 > ### Chat
 >
-> Realtime chat over gRPC
+> Realtime chat over gRPC.
+>
+> Motivation for this project came from wanting to learn more about using gRPC in the frontend and also learning more about PocketBase.
 >
 > - [source](https://github.com/Inveracity/svelte-grpc-stream)
 >
 > - [demo](https://chat.christopherbaklid.com)
 >
-> `Svelte` `Go` `gRPC` `PocketBase` `NATS` `Redis`
-
+> `Svelte` `Go` `gRPC` `PocketBase` `Nats` `Redis`
 
 > ### Task distributor
 >
-> Asynchronous task runner
+> Asynchronous task runner.
+>
+> Motivation for this project came wanting to learn more about RethinkDB and Nats.
 >
 > - [source](https://github.com/Inveracity/nats-python-example)
 >
-> `Python` `RethinkDB` `NATS`
+> `Python` `RethinkDB` `Nats`
 >
 
 > ### Toolow
 >
-> A small UI for increasing the volume on video files
+> A small UI for increasing the volume on video files.
+>
+> Motivation for this project came from wanting to learn how to build desktop applications in Go.
 >
 > - [source](https://github.com/Inveracity/toolow)
 >
-> `Wails` `Go` `FFMPEG`
+> `Wails` `Go` `FFmpeg`
