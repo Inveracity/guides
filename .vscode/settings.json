@@ -1,0 +1,65 @@
+{
+  "editor.trimAutoWhitespace": true,
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "cSpell.enabledLanguageIds": [
+    "markdown"
+  ],
+  "[hcl]": {
+    "editor.tabSize": 2
+  },
+  "files.associations": {
+    "*.nomad": "hcl"
+  },
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "[scss]": {
+    "editor.formatOnSave": false
+  },
+  "cSpell.words": [
+    "certresolver",
+    "configfile",
+    "datacenter",
+    "datacenters",
+    "deadsnakes",
+    "entrypoints",
+    "exposedbydefault",
+    "GOBIN",
+    "gohugoio",
+    "GOPATH",
+    "Heya",
+    "hushlogin",
+    "journalctl",
+    "Keychain",
+    "LASTEXITCODE",
+    "MAINPID",
+    "mydomain",
+    "myresolver",
+    "NATS",
+    "networkd",
+    "NOFILE",
+    "NPROC",
+    "pyenv",
+    "pylint",
+    "setdefault",
+    "SHOWCOLORHINTS",
+    "SHOWDIRTYSTATE",
+    "SHOWSTASHSTATE",
+    "SHOWUNTRACKEDFILES",
+    "SHOWUPSTREAM",
+    "SIGINT",
+    "SOMEKEY",
+    "SOMEVALUE",
+    "Toolow",
+    "Traefik",
+    "USERPROFILE",
+    "virtualenv",
+    "websecure",
+    "wslconfig",
+    "zxvf"
+  ]
+}

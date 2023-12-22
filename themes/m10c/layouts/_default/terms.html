@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <h1> Docs </h1>
+  <section id="menu">
+    <ul>
+      {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+        <p>{{ $key | strings.ToUpper }}<hp>
+        <ul>
+          {{ range $taxonomy.Pages }}
+            <div hugo-nav="{{ .RelPermalink }}"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </ul>
+  </section>
+
+{{ end }}

@@ -1,10 +1,17 @@
-# Powershell (5.1)
++++
+title = "Powershell"
+categories = ["Coding"]
++++
 
-## Custom Powershell Prompt
+## Custom Powershell (5.1) Prompt
 
-Creat the following file: `C:\Users\<USERNAME>\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
+Create the following file:
 
-Add the below code to the file and save it.
+```powershell
+C:\Users\$env:USERNAME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+```
+
+With the following contents:
 
 ```powershell
 function Write-BranchName () {
@@ -70,6 +77,6 @@ Start powershell or run the below command to update the prompt
 and it should appear like so (but with actual colors):
 
 ```powershell
-Username:~\git\someproject (git-branch-name) PS>
+Username:~\git\some_project (git-branch-name) PS>
 > |
 ```

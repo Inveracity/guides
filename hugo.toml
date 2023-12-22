@@ -1,0 +1,41 @@
+#baseURL = 'http://christopherbaklid.com/'
+languageCode = 'en-gb'
+title = 'CHRISTOPHER BAKLID SIMIONE'
+theme = "m10c"
+paginate = 8
+
+[params]
+  description = "Minimally explained technical documentation"
+
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  identifier = "categories"
+  name = "Docs"
+  url = "/categories/"
+  weight = 2
+
+[[params.social]]
+  icon = "github"
+  name = "My Github"
+  url = "https://github.com/inveracity"
+
+[params.style]
+  darkestColor = "#181b24" # Sidebar and noteblocks
+  darkColor = "#111" # Background
+  lightColor = "#cad4d9" # Code and content
+  lightestColor = "#fff" # Headers, titles
+  primaryColor = "#54a87a" # circle, bars, tags, links
+
+[markup.highlight]
+    codeFences = true
+    noClasses = true
+    style = "onedark"
+    tabWidth = 2
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'

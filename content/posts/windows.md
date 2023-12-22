@@ -1,20 +1,22 @@
-# Windows Development Environment for Software Engineers
++++
+title = "Windows"
+categories = ["Setup"]
++++
 
-How to set up a development environment on Windows 10/11 with docker
+## Windows Development Environment for Software Engineers
 
+How to set up a development environment on Windows 11
 
-# Install Windows Terminal
+### Install Windows Terminal
 
 Open Microsoft Store and search for Terminal and install it
 
-# Install WSL
+### Install WSL
 
-create a `.wslconfig`
+create the file `C:\Users\<user>\.wslconfig` with the following content:
 
-open `C:\Users\<user>\.wslconfig`
-
-and add
-```
+```ini
+# C:\Users\<user>\.wslconfig
 [wsl2]
 memory=2GB
 processors=2
@@ -30,17 +32,17 @@ wsl --setdefault Ubuntu  # Set Ubuntu as the default shell
 wsl -l -v  # Check it's set correctly
 ```
 
-# Configure Windows Terminal
+### Configure Windows Terminal
 
 In Windows Terminal press `CTRL`+`,` to open the settings
 
 Set Ubuntu as the default shell in the settings
 
-# Configure WSL
+## Configure WSL
 
 In WSL create `/etc/wsl.conf`
 
-```
+```ini
 [boot]
 command = #add a command you want to run at boot
 ```
@@ -48,25 +50,25 @@ command = #add a command you want to run at boot
 
 Some VPNs require a different MTU size that can be set in the boot command section
 
-```
+```ini
 command = ip link set dev eth0 mtu 1280
 ```
 
 
-# WSL welcome message
+### WSL welcome message
 
-Silence the welcome message
+Silence the welcome message in WSL
 
 ```sh
 touch ~/.hushlogin
 ```
 
 
-# Configure SSH
+### Configure SSH
 
 In WSL add a folder in the home directory
 
-```
+```sh
 mkdir ~/.ssh
 ```
 
@@ -74,12 +76,12 @@ add your public and private SSH key files
 
 and set the access control on the files
 
-```
+```sh
 chmod 600 ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa.pub
 ```
 
-# Install Keychain SSH Agent
+### Install Keychain SSH Agent
 
 In WSL
 
@@ -96,20 +98,7 @@ in `~/.profile` add the following line
 eval `keychain --eval --agents ssh id_rsa`
 ```
 
-# Install VSCode
-
-Download and install VSCode from [code.visualstudio.com](https://code.visualstudio.com/download)
-
-Open VSCode and install the extension `Remote - WSL` from microsoft
-
-Open the WSL shell and type in
-
-```sh
-cd ~ # go to the home folder
-code . # run code
-```
-
-# Configure bash prompt
+### Configure bash prompt
 
 Find the PS1 section in `~/.bashrc`
 
@@ -129,14 +118,19 @@ if [ "$color_prompt" = yes ]; then
 
 > **Note**: the above PS1 setting is a personal preference
 
-# Configure Powershell prompt
+## Install VSCode
 
-[Powershell](./powershell.md)
+Download and install VSCode from [code.visualstudio.com](https://code.visualstudio.com/download)
 
-# Install Python
+Open VSCode and install the extension `Remote - WSL` from microsoft
 
-[Install Python](./python.md)
+Open the WSL shell and run
 
-# Golang
+```sh
+cd ~ # go to the home folder
+code . # run VSCode
+```
 
-[Install Golang](./golang.md)
+## Configure Powershell prompt
+
+[Powershell](/posts/powershell)

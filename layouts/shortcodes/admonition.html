@@ -1,0 +1,20 @@
+{{ $type := .Get "type" }}
+{{ $title := .Get "title" }}
+
+
+<div class="admonition admonition-{{ $type | lower }}">
+  <div class="admonition-heading heading-{{ $type | lower }}">
+    <div class="admonition-icon">
+    {{ partial "icon.html" (dict "ctx" $ "name" $type) }}
+    </div>
+    <div class="admonition-title">
+      {{ $title }}
+    </div>
+  </div>
+
+  <div class="admonition-content">
+    <p>
+      {{ .Inner | markdownify }}
+    </p>
+  </div>
+</div>
