@@ -1,0 +1,10 @@
+services:
+  guides:
+    image: inveracity/guides:latest
+    container_name: guides
+    build:
+      context: .
+      dockerfile: docker/guides.dockerfile
+
+    ports:
+      - "8080:80"

@@ -1,9 +1,9 @@
 .PHONY: docker
 docker:
 	@echo "Building..."
-	@docker build -t inveracity/guides:latest -f docker/guides.dockerfile .
+	@docker compose build
 	@echo "Pushing..."
-	@docker push inveracity/guides:latest
+	@docker compose push
 
 .PHONY: deploy
 deploy:

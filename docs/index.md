@@ -8,12 +8,7 @@ This is a collection of guides with minimal explanation that I use as reference 
 The reason for the "_minimally explained_" bit is to keep it brief and fast to glance through.
 Feel free to [open an issue on GitHub](https://github.com/Inveracity/guides) if you find anything to be incorrect or out of date.
 
-### About myself
-
-<figure markdown="span">
-    ![](avatar.jpg){ width="300" }
-    <figcaption>me</figcaption>
-</figure>
+### `Whoami`
 
 I'm Christopher.
 
