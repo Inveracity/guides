@@ -29,9 +29,6 @@ The following is a list of personal projects.
 
     ---
 
-    Install [`zensical`](#) with [`pip`](#) and get up
-    and running in minutes
-
     Motivation for this project came from wanting to learn more about using
     gRPC in the frontend and also learning more about PocketBase.
 
@@ -41,9 +38,9 @@ The following is a list of personal projects.
 
 -   :octicons-checklist-24:{ .lg .middle } __Task distributor__
 
-    ---
-
     Asynchronous task runner.
+
+    ---
 
     Motivation for this project came wanting to learn more about RethinkDB and Nats.
 
@@ -54,9 +51,9 @@ The following is a list of personal projects.
 
 -   :octicons-desktop-download-24:{ .lg .middle } __Toolow__
 
-    ---
-
     A small UI for increasing the volume on video files.
+
+    ---
 
     Motivation for this project came from wanting to learn how to build desktop applications in Go.
 
