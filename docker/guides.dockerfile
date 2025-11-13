@@ -1,12 +1,16 @@
-FROM inveracity/hugo:0.115.2 as builder
+FROM python:3.13-slim AS builder
 
-WORKDIR /srv/hugo
-COPY . .
+RUN pip install zensical
 
-RUN /hugo
+WORKDIR /guides
+
+COPY zensical.toml .
+COPY docs ./docs
+
+RUN zensical build
 
 FROM nginx:alpine
 
-COPY --from=builder /srv/hugo/public/ /usr/share/nginx/html
+COPY --from=builder /guides/site /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]

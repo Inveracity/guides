@@ -2,6 +2,8 @@
   "editor.trimAutoWhitespace": true,
   "editor.formatOnSave": true,
   "files.insertFinalNewline": true,
+  "markdown.validate.enabled": true,
+  "markdown.validate.fileLinks.enabled": "error",
   "cSpell.enabledLanguageIds": [
     "markdown"
   ],
