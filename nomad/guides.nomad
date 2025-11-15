@@ -1,3 +1,7 @@
+variable "now" {
+  default = ""
+}
+
 job "guides" {
   datacenters = ["linode"]
   type        = "service"
@@ -29,9 +33,13 @@ job "guides" {
     task "server" {
       driver = "docker"
 
+      env {
+        now = var.now
+      }
+
       config {
-        image = "inveracity/guides:latest"
-        ports = ["http"]
+        image      = "inveracity/guides:latest"
+        ports      = ["http"]
         force_pull = true
       }
       resources {
