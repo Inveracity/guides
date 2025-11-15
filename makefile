@@ -8,7 +8,7 @@ docker:
 .PHONY: deploy
 deploy:
 	@echo "Deploying..."
-	@nomad job run nomad/guides.nomad
+	@nomad job run -var="now=$(shell date +%Y-%m-%dT%H:%M:%S%z)" nomad/guides.nomad
 
 .PHONY: upgrade
 upgrade:
