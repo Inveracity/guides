@@ -1,6 +1,6 @@
 FROM python:3.13-slim AS builder
 
-RUN pip install zensical==0.0.8
+RUN pip install zensical==0.0.10
 
 WORKDIR /guides
 
