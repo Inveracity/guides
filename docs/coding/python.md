@@ -7,31 +7,17 @@ hide:
 
 # Install Python
 
-## Install Python for linux method 1
+## Using uv
 
 ```sh
-curl https://pyenv.run | bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv init myproject
+cd myproject
+uv run python
 ```
 
-add the following to `~/.bashrc`
+## Using apt
 
-```sh
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
-```
-
-and run
-
-```sh
-exec $SHELL
-pyenv --version
-pyenv install 3.10.5 # or which ever version required
-pyenv global 3.10.5
-python --version
-```
-
-## Install Python for linux method 2
 ```sh
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update

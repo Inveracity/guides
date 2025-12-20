@@ -12,15 +12,12 @@ deploy:
 
 .PHONY: upgrade
 upgrade:
-	. ./.venv/bin/activate && \
-	pip install zensical --upgrade
+	uv add zensical --upgrade
 
 .PHONY: serve
 serve:
-	. ./.venv/bin/activate && \
-	zensical serve
+	uv run zensical serve --open
 
 .PHONY: build
 build:
-	. ./.venv/bin/activate && \
-	zensical build
+	uv run  zensical build --clean
