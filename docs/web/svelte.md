@@ -7,9 +7,9 @@ hide:
 
 ## SvelteKit
 
-!!! note "Node"
-    Install [Node](../web/node)
+!!! note "Bun"
+    Install [Bun](../web/bun)
 
 ```sh
-npx sv@latest create
+bunx sv@latest create
 ```
