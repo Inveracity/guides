@@ -14,3 +14,11 @@ make serve
 make docker
 make deploy
 ```
+
+## Server
+
+```sh
+git pull
+docker pull
+docker compose up -d
+```
