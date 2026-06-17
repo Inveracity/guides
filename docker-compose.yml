@@ -7,7 +7,7 @@ services:
       dockerfile: docker/guides.dockerfile
 
     ports:
-      - "8080:80"
+      - "80"
     labels:
       - traefik.enable=true
       - traefik.http.routers.ui.rule=Host(`christopherbaklid.com`)
