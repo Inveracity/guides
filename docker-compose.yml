@@ -10,8 +10,8 @@ services:
       - "80"
     labels:
       - traefik.enable=true
-      - traefik.http.routers.ui.rule=Host(`christopherbaklid.com`)
-      - traefik.http.routers.ui.entrypoints=websecure
-      - traefik.http.routers.ui.tls.certresolver=myresolver
-      - traefik.http.routers.ui.tls=true
+      - traefik.http.routers.guides.rule=Host(`christopherbaklid.com`)
+      - traefik.http.routers.guides.entrypoints=websecure
+      - traefik.http.routers.guides.tls.certresolver=myresolver
+      - traefik.http.routers.guides.tls=true
     restart: "unless-stopped"
