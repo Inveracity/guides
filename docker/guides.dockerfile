@@ -1,6 +1,7 @@
-FROM python:3.13-slim AS builder
+FROM python:3.14-slim AS builder
 
-RUN pip install zensical==0.0.45
+COPY docker/requirements.out.txt requirements.txt
+RUN pip install -r requirements.txt
 
 WORKDIR /guides
 

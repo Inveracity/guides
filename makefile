@@ -1,7 +1,9 @@
 .PHONY: docker
 docker:
+	@echo "Exporting uv lock to requirements.txt"
+	@uv export --quiet --output-file docker/requirements.out.txt
 	@echo "Building..."
-	@docker compose build
+	@docker compose build --quiet
 	@echo "Pushing..."
 	@docker compose push
 
@@ -15,4 +17,4 @@ serve:
 
 .PHONY: build
 build:
-	uv run  zensical build --clean
+	uv run zensical build --clean
